@@ -1,0 +1,38 @@
+
+.details_div h3{
+    font-size: 45px;
+    
+    
+}
+
+.details_div p{
+    font-size: 35px;
+}
+
+
+.outer_div {
+    width: 100vw;
+    height: 90vh;
+    display: grid;
+    place-items: center;
+}
+
+.inner_div {
+    width: 60%;
+    height: 90%;
+    position: relative;
+    
+}
+
+.details_div {
+    width: 90%;
+    height: 90%;
+    position: absolute;
+    left: 5%;
+    top: 5%;
+    display: grid;
+    place-items: center;
+    
+}
+
+

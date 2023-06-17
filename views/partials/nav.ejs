@@ -1,0 +1,19 @@
+<div class="nav-bar">
+    <a href="/">
+        <h1>Blog Site</h1>
+    </a>
+    
+    <nav>
+        <ul>
+            <% if(user) { %>
+            <li><a href="/">Welcome, <%= user.name %></a> </li>
+            <li><a href="/blogs/create">Write</a></li>
+            <li><a href="/logout">Logout</a></li>
+            <% } else { %>
+            <li><a href="/login">Login</a></li>
+            <li><a href="/about">About</a></li>
+            
+            <% } %>
+        </ul>
+    </nav>
+</div>

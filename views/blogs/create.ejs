@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <%- include('../partials/head.ejs') %>
+
+    <body>
+
+        
+
+
+        <div class="root">
+
+
+            <%- include('../partials/nav.ejs') %>
+
+            <form action="/blogs" method="POST">
+
+            
+                <input type="text" id="title" placeholder="Title" name="title">
+                <label for="title">Title</label><br>
+                
+                <input type="text" id="snippet" name="snippet">
+                <label for="snippet">Snippet</label><br>
+            
+                <textarea name="blog" placeholder="Write.." id="text-area" cols="50" rows="30"
+                    onchange="changebordercolor()"></textarea><br>
+
+                <button class="blog-publish-button">Publish</button>
+            </form>
+
+
+        </div>
+
+
+
+        <script>
+            var text_area = document.getElementById('text-area');
+            text_area.style.border = "0px";
+            text_area.style.borderTopColor = "red";
+
+            text_area.addEventListener("click", () => {
+                text_area.style.border = "0px";
+            });
+        </script>
+
+
+        
+    </body>
+
+</html>

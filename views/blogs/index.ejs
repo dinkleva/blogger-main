@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('../partials/head.ejs') %>
+
+        <body>
+
+            <style>
+
+
+
+
+            </style>
+
+            <div class="root">
+
+                <%- include('../partials/nav.ejs') %>
+
+                    <!-- <div class="all-blogs-display">
+                        <h2>All Blogs</h2>
+
+                            <% if (blogs.length> 0) { %>
+                                <% blogs.forEach(blog => { %>
+                                    <a href="/blogs/<%= blog._id %>">
+                                        <h3>
+                                            <%= blog.title %>
+                                        </h3>
+                                        <p>
+                                            <%= blog.snippet %>
+                                        </p>
+                                    </a>
+                                    <% }) %>
+
+                                        <% } else { %>
+                                            <p>There are no Blogs to display...</p>
+                                            <% } %>
+                    </div> -->
+
+
+                    <div class="aa">
+
+                        <div class="al">
+                            <% if (blogs.length> 0){ %>
+                                <% blogs.forEach(blog=> { %>
+
+                                    <div class="ll">
+                                        <div class="lc">
+                                            <div class="ch">
+                                                <div class="hc">
+                                                    <h3>Posted by.. <%= blog.author.name %></h3>
+                                                </div>
+                                                <a href="/blogs/<%= blog.slug %>/<%= blog._id  %>" class="title">
+                                                    <h2>
+                                                        <%= blog.title %>
+                                                    </h2>
+                                                    <div class="cf">
+                                                        <h3>
+                                                            <%= blog.snippet %>
+                                                        </h3>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="li"></div>
+                                    </div>
+
+
+                                    <% }) %>
+
+                                        <% } else { %>
+                                            <p>There are no Blogs To Display</p>
+                                            <% } %>
+
+
+
+                                                <div class="ll">
+                                                    <div class="lc">
+                                                        <div class="ch">
+                                                            <div class="hc">
+                                                                <h3>Tom Jack</h3>
+                                                            </div>
+                                                            <a href="" class="title">
+                                                                <h2>I Tried The Billionaire’s Morning Routine and Made
+                                                                    $3000</h2>
+                                                                <div class="cf">
+                                                                    <h3>Habits of the world’s most successful people
+                                                                    </h3>
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="li"></div>
+                                                </div>
+                                                <div class="ll">
+                                                    <div class="lc">
+                                                        <div class="ch">
+                                                            <div class="hc">
+                                                                <h3>Tom Jack</h3>
+                                                            </div>
+                                                            <a href="" class="title">
+                                                                <h2>I Tried The Billionaire’s Morning Routine and Made
+                                                                    $3000</h2>
+                                                                <div class="cf">
+                                                                    <h3>Habits of the world’s most successful people
+                                                                    </h3>
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="li"></div>
+                                                </div>
+                                                <div class="ll">
+                                                    <div class="lc">
+                                                        <div class="ch">
+                                                            <div class="hc">
+                                                                <h3>Tom Jack</h3>
+                                                            </div>
+                                                            <a href="" class="title">
+                                                                <h2>I Tried The Billionaire’s Morning Routine and Made
+                                                                    $3000</h2>
+                                                                <div class="cf">
+                                                                    <h3>Habits of the world’s most successful people
+                                                                    </h3>
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="li"></div>
+                                                </div>
+
+
+                        </div>
+
+                    </div>
+
+
+
+
+            </div>
+        </body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+

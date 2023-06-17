@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <%- include('./partials/head.ejs') %>
+
+        <body>
+
+            <style>
+                .signin_container {
+                    background: grey;
+                    width: 30vw;
+                    height: 70vh;
+                    position: absolute;
+                    left: 40%;
+                    top: 10rem;
+                    display: grid;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                
+
+
+                .signin_submit>button {
+                    width: 100px;
+                    height: 50px;
+                    background-color: blue;
+                    color: white;
+                }
+            </style>
+
+
+            <%- include('./partials/nav.ejs') %>
+                <div class="signin_container">
+                    <div class="signin_elements">
+                        <h1>Hello Please Sign-In </h1>
+                        <form>
+                            <div class="signin_page">
+                                <div class="signin_items">
+                                    <div class="signin_name">
+                                        <label for="email">
+                                            <h1>Email</h1>
+                                        </label>
+                                        <input type="email" name="email" id="email">
+                                        <div class="email error"></div>
+                                    </div>
+                                    <div class="signin_password">
+                                        <label for="password">
+                                            <h1>Password</h1>
+                                        </label>
+                                        <input type="password" name="password" id="password">
+                                        <div class="password error"></div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="signin_submit">
+                                <label for="submit">
+                                    <h1>Submit</h1>
+                                </label>
+                                <button type="submit" name="submit" value="ok">Signin</button>
+                            </div>
+                            <div class="signup_link">
+                                <h4>Don't have an account? Create One!</h4>
+                                <a href="/signup">Sign Up</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <script>
+
+                    const form = document.querySelector('form')
+                    const emailError = document.querySelector('.email.error')
+                    const passwordError = document.querySelector('.password.error')
+                    form.addEventListener('submit', async (e) =>{
+
+                        e.preventDefault()
+
+                        //reset errors
+                        emailError.textContent = ''
+                        passwordError.textContent = ''
+
+                        //get the values entered by user
+                        const email = form.email.value
+                        const password = form.password.value
+
+
+
+                        try{
+                            const res = await fetch('/login', {
+                                method: 'POST',
+                                body: JSON.stringify({ email, password }),
+                                headers: { 'Content-Type': 'application/json'}
+                            })
+
+                            const data = await res.json()
+
+                            if(data.errors){
+                                emailError.textContent = data.errors.email
+                                passwordError.textContent = data.errors.password
+                            }
+                            
+                            if(data.user){
+                                location.assign('/blogs')
+                            }
+
+
+                        }
+                        catch (err){
+
+                        }
+
+
+                    })
+                </script>
+
+        </body>
+
+</html>
+
+

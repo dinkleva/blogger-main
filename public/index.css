@@ -1,0 +1,97 @@
+.root::-webkit-scrollbar{
+    display: none;
+}
+
+::-webkit-scrollbar{
+    width: 3px;
+    background-color: orange;
+}
+
+::-webkit-scrollbar-track{
+    box-shadow: inset 0 0 5px black;
+    border-radius: 9px;
+}
+
+::-webkit-scrollbar-thumb{
+    background: white;
+    height: 5px;
+    border-radius: 10px;
+}
+
+.root{
+    overflow-y: scroll;
+    
+}
+
+.aa{
+    display: grid;
+    align-items: center;
+    width: 70vw;
+    margin-left: 15%;
+    margin-top: 5rem;
+    position: relative;
+    
+   
+    
+}
+
+.al{
+    width: 100%;
+    height: 70vh;
+    margin-left: 5%;
+    
+}
+
+.ll{
+    width: 100%;
+    height: 20vh;
+    margin-top: 2rem;
+    
+    display: flex;
+}
+
+.lc{
+    width: 70%;
+    height: 100%;
+   
+    
+    padding: 0;
+    position: relative;
+
+}
+
+.li{
+    width: 30%;
+    height: 100%;
+    background-color: hsl(210, 5%, 80%);
+}
+
+.ch{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: -15px;
+}
+
+.hc{
+    height: 1rem;
+}
+
+.ch a{
+    width: 100%;
+    height: 2.5rem;
+    text-decoration: none;
+    font-size: 0.9rem;
+    
+}
+
+.ch a h2{
+    color: black;
+    
+}
+
+.cf{
+    width: 100%;
+    color: hsl(0, 0%, 80%);
+    
+}
